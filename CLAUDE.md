@@ -1,13 +1,3 @@
-# PRODIGY9 Coding School
-
-This project's AI coding environment is managed by [ACE](https://github.com/ace-rs/ace).
-Run `ace` to start a coding session. Run `ace setup` if not yet configured.
-
-Skills and conventions are provided by the **PRODIGY9 Coding School** school and are
-symlinked into `.claude/skills/`. Skill edits go through symlinks into the school clone —
-propose changes back to the school repo when ready. Run `ace config` or `ace paths` to
-debug configuration issues.
-
 # fact-check skill — design rationale
 
 This repo *is* an Agent Skill (`SKILL.md` + `references/`). These notes capture the *why*
@@ -55,3 +45,13 @@ always-loaded surface lean.
 
 **Conventions.** Markdown follows the markdown-writing skill (90-column wrap, aligned
 tables); format with its bundled `mdfmt.py`. License: MIT.
+
+# PRODIGY9 Coding School
+
+This project's AI coding environment is managed by [ACE](https://github.com/ace-rs/ace).
+Run `ace` to start a coding session. Run `ace setup` if not yet configured.
+
+Skills and conventions are provided by the **PRODIGY9 Coding School** school and are
+symlinked into `.claude/skills/`. Skill edits go through symlinks into the school clone —
+propose changes back to the school repo when ready. Run `ace config` or `ace paths` to
+debug configuration issues.
