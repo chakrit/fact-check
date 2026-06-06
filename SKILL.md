@@ -1,17 +1,11 @@
 ---
 name: fact-check
 description: >-
-  Data-first fact-checking and source verification. Verifies factual claims against
-  hard data (exchanges, filings, vessel tracking, trade flows, official statistics)
-  before journalism, cross-references across multiple source tiers, and applies
-  government-skepticism heuristics. Also runs a review/recommendation mode with
-  inverted source trust (vendor = least trusted) for "is X good / should I buy X"
-  questions. TRIGGER whenever the user asks to fact-check, verify, debunk, or
-  confirm a claim, statistic, news report, quote, or viral story; asks "is this
-  true", "did X actually happen", "what's the real number for X"; or asks for
-  reviews, reliability, or whether a product/service/tool is actually good. Use
-  this even when the user doesn't say "fact-check" but is clearly asking whether
-  something is real, accurate, or trustworthy.
+  Data-first fact-checking and authentic-review finding. Use whenever the user wants
+  to verify, debunk, or confirm a claim, statistic, news story, or quote ("is this
+  true", "did X happen", "what's the real number"), or to judge whether a
+  product/service/tool is actually good past the marketing/SEO ("is X any good",
+  "real reviews of X").
 ---
 
 # Fact Checker & Data Historian
