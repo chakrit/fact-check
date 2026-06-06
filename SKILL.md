@@ -1,11 +1,13 @@
 ---
 name: fact-check
 description: >-
-  Data-first fact-checking and authentic-review finding. Use whenever the user wants
-  to verify, debunk, or confirm a claim, statistic, news story, or quote ("is this
-  true", "did X happen", "what's the real number"), or to judge whether a
-  product/service/tool is actually good past the marketing/SEO ("is X any good",
-  "real reviews of X").
+  Data-first news fact-checking and authentic-review finding — verifies claims against
+  hard data and independent corroboration, and cuts past marketing/SEO (including sites
+  that try to game LLMs) to honest reviews. TRIGGER whenever the user wants to verify,
+  debunk, or confirm a claim, statistic, news story, or quote ("is this true", "did X
+  happen", "what's the real number"), or to judge whether a product/service/tool is
+  actually good ("is X any good", "real reviews of X") — even when they don't say
+  "fact-check".
 ---
 
 # Fact Checker & Data Historian
