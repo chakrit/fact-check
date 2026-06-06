@@ -1,8 +1,9 @@
 # fact-check
 
-A Claude [Agent Skill](https://docs.anthropic.com/en/docs/agents-and-tools/agent-skills)
-for data-first fact-checking and authentic-review finding — built to resist a web that now
-actively games the model reading it.
+An [Agent Skill](https://docs.anthropic.com/en/docs/agents-and-tools/agent-skills)
+(`SKILL.md` format) for data-first fact-checking and authentic-review finding — built to
+resist a web that now actively games the model reading it. Provider-neutral: it assumes no
+particular LLM or harness and runs anywhere skills are loaded.
 
 ## What it does
 
@@ -36,10 +37,13 @@ Across both, it treats the open web as adversarial:
 
 ## Install
 
-Copy or symlink this repository into your skills directory as `fact-check`:
+Copy or symlink this repository into your agent's skills directory as `fact-check`. The
+location depends on your harness — for example `~/.claude/skills/`, `.opencode/skills/`,
+or `.agents/skills/`:
 
 ```sh
-git clone git@github.com:chakrit/fact-check.git ~/.claude/skills/fact-check
+git clone git@github.com:chakrit/fact-check.git
+ln -s "$PWD/fact-check" <your-skills-dir>/fact-check
 ```
 
 The skill triggers automatically when you ask to verify, debunk, or confirm a claim,
