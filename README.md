@@ -28,12 +28,14 @@ Across both, it treats the open web as adversarial:
 
 ## Structure
 
-| File                             | When it's read                                   |
-| -------------------------------- | ------------------------------------------------ |
-| `SKILL.md`                       | always — news method, shared rules, and routing  |
-| `references/reviews.md`          | review and recommendation questions              |
-| `references/data-sources.md`     | verifying a quantitative claim in a given domain |
-| `references/media-provenance.md` | a claim resting on an image, video, or audio     |
+| File                             | When it's read                                  |
+| -------------------------------- | ----------------------------------------------- |
+| `SKILL.md`                       | always — news method, shared rules, and routing |
+| `references/reviews.md`          | review and recommendation questions             |
+| `references/source-registers.md` | primary sources + cross-checks per claim beat   |
+| `references/data-sources.md`     | reasoning about a number + proxy cross-checks   |
+| `references/media-provenance.md` | a claim resting on an image, video, or audio    |
+| `references/example.md`          | worked examples of both modes (output format)   |
 
 ## Install
 

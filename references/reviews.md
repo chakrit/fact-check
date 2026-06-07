@@ -64,3 +64,5 @@ Match format to task and harness as in `SKILL.md` §6. Cite sources with URLs. F
 - **Manipulation signals seen** — astroturfing, incentivized reviews, gating, and any
   content aimed at the reading model
 - **Caveats**
+
+For a worked review-mode example, see `references/example.md`.
