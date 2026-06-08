@@ -1,5 +1,7 @@
 # Quick-Start Source Registers (by claim type)
 
+_Currency last re-verified 2026-06-08; flags are time-sensitive — confirm before relying._
+
 Once a claim's beat is identified (see `SKILL.md` §1), this gives a curated entry point:
 the primary publishers to reach first, plus the one easy-to-forget cross-check. These are
 *starting points, not a canonical or complete list* — confirm each is current and that
@@ -23,7 +25,9 @@ claim, not data.
   national figure, satellite nightlights.
 - **Integrity gauge** — IMF SDDS / Data Quality Assessment Framework (which countries meet
   disclosure standards).
-- **Note** — confirm the migrated IMF/BIS portals; older hosts are deprecated.
+- **Note** — IMF legacy portal fully retired (Nov 2025); use `data.imf.org` (new API). BIS
+  sole channel is `data.bis.org` (since 2024); the Stats API is now v2
+  (`stats.bis.org/api-doc/v2/`), v1 superseded.
 
 ## Energy, commodities & power
 - **Primaries** — EIA (weekly petroleum status, API); IEA (Oil Market Report); JODI (oil &
@@ -31,7 +35,8 @@ claim, not data.
   electricity); Baker Hughes rig count.
 - **Cross-check** — Ember (independent power-sector data).
 - **Note** — prefer physical-flow, inventory, and refinery-run reports over price
-  commentary.
+  commentary. ENTSO-E rolled out a renewed Transparency Platform (new site/API, 2025–26) —
+  verify you're on the current endpoints, not the legacy `transparency.entsoe.eu`.
 
 ## Shipping, trade & supply chains
 - **Primaries** — UN Comtrade; WTO trade statistics; national customs (USA Trade Online /
@@ -40,9 +45,16 @@ claim, not data.
 - **Cross-check** — mirror statistics (exporter's figures vs partners' reported imports);
   Global Financial Integrity for trade misinvoicing.
 - **Supply-chain stress** — NY Fed Global Supply Chain Pressure Index (GSCPI).
-- **Note** — most AIS vessel trackers (MarineTraffic etc.) are commercial; EMSA is a more
-  authoritative European baseline. A global authoritative AIS baseline still needs
-  verifying.
+- **Note** — AIS *positions*: no single free, global, authoritative live feed exists.
+  Authoritative live global AIS is commercial (MarineTraffic, Spire, Kpler,
+  satellite-AIS); free authoritative coverage is regional (US: `marinecadastre.gov` /
+  NOAA–BOEM from USCG receivers — US waters, archival) or the EMSA European baseline. IMO
+  GISIS carries registry/incidents, not positions; treat free global aggregators (AISHub,
+  aisstream.io) as crowd-sourced, not authoritative.
+- **AIS-derived aggregates** (authoritative & free) — UNCTADstat port-call & performance
+  statistics; the OECD AIS Vessel Tracking Dashboard; Global Fishing Watch
+  vessel-presence. The UN-CEBD AIS Task Team / UN Global Platform publishes methodology
+  (the AIS Handbook), not a live feed.
 
 ## Corporate & financial filings
 - **Primaries** — SEC EDGAR (full-text search); UK Companies House (API); EU BRIS
@@ -60,7 +72,8 @@ claim, not data.
 - **Cross-check** — mirror trade statistics; Human Mortality Database (independent
   excess-mortality / demographic cross-check).
 - **Note** — apply the independence test; a captured national statistics office produces
-  claims, not data.
+  claims, not data. The US Census Data API now requires an API key for all queries (since
+  2026).
 
 ## Politics, elections & government records
 - **Primaries (cross-national)** — IPU Parline (parliaments); International IDEA Voter
@@ -109,7 +122,10 @@ claim, not data.
 - **Meta** — Health Feedback (Science Feedback) for viral health-claim review.
 - **Note** — ClinicalTrials.gov classic site + legacy API retired Jun 2024 (use the
   modernized site + API v2); WHO consolidated onto `data.who.int` (old GHO OData
-  deprecating late 2025); Cochrane full text is mostly paywalled.
+  deprecating late 2025); Cochrane full text is mostly paywalled. FDA launched AEMS
+  (Adverse Event Monitoring System) on 11 Mar 2026, consolidating its adverse-event
+  reporting (FAERS migrated in; from 1 Oct 2026 electronic ICSR submissions route to AEMS
+  via E2B R3) — openFDA endpoints remain the API path.
 
 ## Science & research integrity
 - **Primaries** — Crossref REST API (canonical DOI/metadata); Retraction Watch Database
@@ -120,7 +136,8 @@ claim, not data.
 - **Meta** — PubPeer (post-publication peer review; image-duplication and integrity
   flags).
 - **Note** — Retraction Watch data moved into the production Crossref REST API (Jan 2025);
-  the old Crossref *Labs* annotation endpoint is deprecating — use the production API or
+  the old Crossref *Labs* annotation endpoint is now deprecated — no updates pushed since
+  29 May 2026 (existing annotations remain readable but stale); use the production API or
   the GitLab CSV.
 
 ## Climate & environment
@@ -157,8 +174,10 @@ claim, not data.
 - **Cross-check** — EMSC (European-Mediterranean Seismological Centre): operationally
   independent of USGS — agreement between them confirms an earthquake's parameters.
 - **Note** — no dedicated disaster claim-checker exists; convergence across official
-  sources is the check. GDACS was renamed Nov 2025 (same `gdacs.org`); NOAA/NWS API is
-  US-only — use WMO SWIC elsewhere.
+  sources is the check. GDACS renamed Nov 2025 (now migrating to `new.gdacs.org`; legacy
+  `gdacs.org` still resolves); EM-DAT is free for non-commercial use only —
+  commercial/premium tiers are paywalled (2026). NOAA/NWS API is US-only — use WMO SWIC
+  elsewhere.
 
 ## Technology, cybersecurity & platforms
 - **Primaries** — CVE Program (`cve.org`, identifier registry); NIST NVD (CVSS/CWE
@@ -173,8 +192,9 @@ claim, not data.
 
 ## Fact-check orgs & claim databases
 - **Primaries** — IFCN Code of Principles verified signatories (the vetted-org allowlist);
-  Google Fact Check Explorer / ClaimReview (cross-publisher search — aggregator); and
-  established signatories: Snopes, PolitiFact (US), Full Fact (UK), AFP Fact Check
+  Google Fact Check Explorer (cross-publisher search — aggregator; ClaimReview rich
+  snippets retired from Google Search Jun 2025, but Explorer still ingests the markup);
+  and established signatories: Snopes, PolitiFact (US), Full Fact (UK), AFP Fact Check
   (global).
 - **Cross-check** — EFCSN (European Fact-Checking Standards Network) signatories — an
   independent cross-check on the IFCN list.
@@ -182,7 +202,10 @@ claim, not data.
   orgs).
 - **Note** — use the IFCN/EFCSN allowlist to vet an unfamiliar "fact-checker" (a
   self-label is zero evidence). Meta ended its US third-party fact-checking program Jan
-  2025 (→ Community Notes) — never rely on a single org.
+  2025 (→ Community Notes) and is expanding Community Notes more widely; fact-checking
+  persists outside the US (notably the EU under the DSA) at reduced funding, and Meta's
+  Oversight Board (Mar 2026) cautioned Community Notes are not a full substitute — never
+  rely on a single org.
 
 ## Quotes & misattributions
 - **Primaries** — Quote Investigator (deeply sourced quotation tracing); HathiTrust
