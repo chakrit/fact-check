@@ -64,8 +64,12 @@ always-loaded surface lean.
 
 `source-registers.md` was built by multi-agent web research (per-register fan-out), not
 from training memory — dogfooding "retrieve, don't recall". Re-verify its currency flags
-(portal migrations, API deprecations, agency changes) before relying on them; they were
-accurate as of mid-2026.
+(portal migrations, API deprecations, agency changes) before relying on them; the file's
+top-of-file stamp records the last re-verification (currently 2026-06-08). When
+regenerating, fan out one agent per register with a structured-output schema and verify
+each finding's citation before applying — a wide concurrent fan-out can hit the session
+token limit, so pace concurrency and fold verification into the research agent, not a
+second stage.
 
 **Conventions.** Markdown follows the markdown-writing skill (90-column wrap, aligned
 tables); format with its bundled `mdfmt.py`. License: MIT.
