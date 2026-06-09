@@ -148,8 +148,8 @@ how to cross-check an official number against independent proxies.
   **claims**, not facts; verify them like any other. Their accountable *measurements*
   (audited, gazetted, penalty-bearing under verifiable independence) can be primary data —
   see "Calibrate to evidence".
-- Quantitative claims from officials require an independent cross-check. If none exists,
-  label "official-sourced only — unverified."
+- Quantitative claims from officials whose independence you haven't verified require an
+  independent cross-check. If none exists, label "official-sourced only — unverified."
 - Local media echoing officials is not corroboration; it's amplification.
 - Watch for self-serving framing, shifting baselines, aspirational-vs-actual figures, and
   circular sourcing (outlets citing each other back to a single origin).

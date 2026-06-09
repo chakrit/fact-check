@@ -158,7 +158,8 @@ claim, not data.
 - **Primaries** — ACLED (event-level political violence; free myACLED account) and UCDP
   (Uppsala, academic gold-standard); Copernicus Browser (free Sentinel satellite imagery);
   ADS-B Exchange (unfiltered flight tracking incl. military); MarineTraffic / VesselFinder
-  (AIS); GDELT (aggregator — flag).
+  (AIS — commercial for live global; see the Shipping register); GDELT (aggregator —
+  flag).
 - **Cross-check** — UCDP (conservative, slower) vs ACLED (faster, higher) on fatality
   counts — they bound each other; Bellingcat's Online Investigation Toolkit for OSINT
   verification.
