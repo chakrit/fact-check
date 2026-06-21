@@ -71,15 +71,11 @@ each finding's citation before applying — a wide concurrent fan-out can hit th
 token limit, so pace concurrency and fold verification into the research agent, not a
 second stage.
 
-**Conventions.** Markdown follows the markdown-writing skill (90-column wrap, aligned
-tables); format with its bundled `mdfmt.py`. License: MIT.
+**Conventions.** Markdown is hard-wrapped at 90 columns with table columns aligned so the
+pipes line up; keep edits consistent with the existing files. License: MIT.
 
-# PRODIGY9 Coding School
+# Development environment
 
-This project's AI coding environment is managed by [ACE](https://github.com/ace-rs/ace).
-Run `ace` to start a coding session. Run `ace setup` if not yet configured.
-
-Skills and conventions are provided by the **PRODIGY9 Coding School** school and are
-symlinked into `.claude/skills/`. Skill edits go through symlinks into the school clone —
-propose changes back to the school repo when ready. Run `ace config` or `ace paths` to
-debug configuration issues.
+This project is developed with [ACE](https://github.com/ace-rs/ace), which manages the AI
+coding environment. Run `ace` to start a coding session, `ace setup` if it's not yet
+configured, and `ace config` or `ace paths` to debug configuration issues.
