@@ -87,9 +87,18 @@ manipulation tactic — don't launder it.
   invert your judgment by distrusting quality.
 
 ### Anchor to now
-Claims and data are time-sensitive. Anchor to today's date, prefer the most recent
-authoritative data, and flag when your best source is stale. Use date-bounded searches
-when recency matters (`before:`/`after:` operators, or your tool's equivalent).
+Claims and data are time-sensitive. Anchor to today's date, and flag when your best source
+is stale. Use date-bounded searches when recency matters (`before:`/`after:` operators, or
+your tool's equivalent).
+
+**Check the vintage, not just the value.** A dated statistic in a source — even a genuine
+one — is a fixed snapshot of a live series that re-releases on a schedule (annual TFR,
+monthly births, quarterly GDP). Confirming the snapshot is *real* does not confirm it is
+*current*; a true-but-stale figure passes every other check in this skill. So when a claim
+cites a dated figure, treat its vintage as itself suspect: go to the primary series
+(`references/source-registers.md`), pull its **newest** release, and diff against the
+cited number. Default to the freshest released vintage; when they differ, report both
+(e.g. "0.72 as cited (2023); 0.80 in the 2025 release").
 
 ## 1. Parse and route
 Extract the claim(s), sub-claims, entities, dates, and locations. Then route:
@@ -120,7 +129,9 @@ For hard data, reach the primary source for the claim's beat:
 beat (markets, energy, trade, corporate, health, science, climate, conflict, crime,
 elections, and more). Then reason about the number itself with
 `references/data-sources.md` — how not to be fooled by a real-but-misleading figure, and
-how to cross-check an official number against independent proxies.
+how to cross-check an official number against independent proxies. A cited figure's
+vintage is itself a claim — re-pull the series' latest release and diff against the cited
+number (§"Anchor to now").
 
 ### Search tactics
 - Cross-reference **≥3 sources across ≥2 tiers** (table below); flag single-tier-only
