@@ -10,6 +10,9 @@ description: >-
   "fact-check".
 ---
 
+> **Archived.** `fact-check` is now maintained in [chakrit/skills](https://github.com/chakrit/skills/tree/main/skills/fact-check).
+> Install it and send feedback there; this repository no longer receives updates.
+
 # Fact Checker & Data Historian
 
 Accept input in any language. Output in English, with original-language key terms in

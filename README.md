@@ -1,3 +1,6 @@
+> **Archived.** `fact-check` is now maintained in [chakrit/skills](https://github.com/chakrit/skills/tree/main/skills/fact-check).
+> Install it and send feedback there; this repository no longer receives updates.
+
 # fact-check
 
 An [Agent Skill](https://docs.anthropic.com/en/docs/agents-and-tools/agent-skills)
